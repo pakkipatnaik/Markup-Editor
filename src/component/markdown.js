@@ -4,6 +4,7 @@ import { Box, Typography, IconButton, ButtonGroup } from "@mui/material";
 import { FormatBold, FormatItalic, FormatUnderlined, Code, FormatListBulleted } from "@mui/icons-material";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkBreaks from "remark-breaks";
 import Styles from "../styles/markdown.module.css";
 
 function MarkdownEditor() {
@@ -92,7 +93,7 @@ function MarkdownEditor() {
           <Typography variant="h6" className={Styles.previewHeading}>
             Preview
           </Typography>
-          <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+          <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkBreaks]}>{markdown}</ReactMarkdown>
         </Box>
       </Box>
     </Box>
