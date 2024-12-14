@@ -1,0 +1,32 @@
+/* App.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.editor {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: none;
+}
+
+.preview {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border-left: 1px solid #ccc;
+}
